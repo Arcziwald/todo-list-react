@@ -6,8 +6,8 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
     return null;
   }
   return (
-    <div className="stat__button">
-      <button className="stat__button button--toggleHideDoneButton">
+    <div className="Buttons__button">
+      <button className="Buttons__button button--toggleHideDoneButton">
         {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
       </button>
       <button
