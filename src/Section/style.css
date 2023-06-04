@@ -20,6 +20,10 @@
     font-weight: 700;
     margin: 0;
   }
+ 
+  .section__body {
+    padding: 20px;
+}
   
   .section__tasks {
     display: grid;
