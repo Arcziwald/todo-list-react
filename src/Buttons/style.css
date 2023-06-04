@@ -27,7 +27,7 @@
   border: 2px solid rgb(0, 0, 0);
 }
 @media (max-width: 767px) {
-  .stat__button {
+  .Buttons__button {
     width: 100%;
     margin: 2px;
   }

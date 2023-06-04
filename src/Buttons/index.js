@@ -11,7 +11,7 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
         {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
       </button>
       <button
-        className="stat__button button--markAllDoneButton"
+        className="Buttons__button button--markAllDoneButton"
         autofocus
         disabled={tasks.every(({ done }) => done)}
       >
