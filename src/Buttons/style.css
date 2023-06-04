@@ -1,4 +1,4 @@
-.Buttons__button {
+.buttons__button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@
   border: 2px solid rgb(0, 0, 0);
 }
 @media (max-width: 767px) {
-  .Buttons__button {
+  .buttons__button {
     width: 100%;
     margin: 2px;
   }

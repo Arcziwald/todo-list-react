@@ -6,12 +6,12 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
     return null;
   }
   return (
-    <div className="Buttons__button">
-      <button className="Buttons__button button--toggleHideDoneButton">
+    <div className="buttons__button">
+      <button className="buttons__button button--toggleHideDoneButton">
         {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
       </button>
       <button
-        className="Buttons__button button--markAllDoneButton"
+        className="buttons__button button--markAllDoneButton"
         autofocus
         disabled={tasks.every(({ done }) => done)}
       >
