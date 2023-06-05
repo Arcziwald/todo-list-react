@@ -15,7 +15,7 @@ function App() {
   const [hideDone, setHideDone] = useState(false);
 
   const toggleHideDone = () => {
-    setHideDone((hideDone) => !hideDone);
+    setHideDone(hideDone => !hideDone);
   };
 
   return (
@@ -31,7 +31,8 @@ function App() {
           <Buttons 
           tasks={tasks} 
           hideDone={hideDone} 
-          toggleHideDone={toggleHideDone} />
+          toggleHideDone={toggleHideDone} 
+          />
         }
       />
     </Container>
