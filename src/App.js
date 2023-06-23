@@ -22,11 +22,11 @@ function App() {
 
   const toggleTaskDone = (id) => {
     setTasks((tasks) =>
-    tasks.map((task) =>
-    task.id === id ? { ...task, done: !task.done } : task
-  )
-);
-};
+      tasks.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
+      )
+    );
+  };
 
   const setAllDone = () => {
     setTasks((tasks) =>
@@ -38,7 +38,7 @@ function App() {
   };
 
   const addNewTask = (content) => {
-    setTasks(tasks => [
+    setTasks((tasks) => [
       ...tasks,
       {
         content,
