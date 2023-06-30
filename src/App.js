@@ -10,12 +10,12 @@ function App() {
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(() => {
     const savedTasks = JSON.parse(localStorage.getItem("tasks"));
-    return savedTasks
-      ? savedTasks
-      : [
-          { id: 1, content: "przejść na Reacta", done: false },
-          { id: 2, content: "zjeść obiad", done: true },
-        ];
+    return (
+      savedTasks || [
+        { id: 1, content: "przejść na Reacta", done: false },
+        { id: 2, content: "zjeść obiad", done: true },
+      ]
+    );
   });
 
   useEffect(() => {
