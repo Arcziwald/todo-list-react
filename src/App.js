@@ -8,15 +8,12 @@ import Container from "./Container";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(() => {
-    const savedTasks = JSON.parse(localStorage.getItem("tasks"));
-    return (
-      savedTasks || [
-        { id: 1, content: "przejść na Reacta", done: false },
-        { id: 2, content: "zjeść obiad", done: true },
-      ]
-    );
-  });
+  const defaultTasks = [
+    { id: 1, content: "przejść na Reacta", done: false },
+    { id: 2, content: "zjeść obiad", done: true },
+  ];
+  const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+  const [tasks, setTasks] = useState(savedTasks || defaultTasks);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -86,6 +83,6 @@ function App() {
       />
     </Container>
   );
-}
+};
 
 export default App;
