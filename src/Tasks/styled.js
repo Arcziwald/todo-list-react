@@ -28,8 +28,6 @@ export const Content = styled.span`
     css`
       text-decoration: line-through;
     `}
-
-  text-decoration: line-through;
 `;
 
 export const Button = styled.button`
