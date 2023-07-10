@@ -1,18 +1,23 @@
-import { List, Item, Content, Button } from "./styled";
+import { List, Item, Content, ToggleDoneButton, RemoveButton } from "./styled";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../theme";
+
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
+<ThemeProvider theme={theme}>
   <List>
     {tasks.map((task) => (
-      <Item key={task.id} hidden={task.done && hideDone}>
-        <Button toggleDone onClick={() => toggleTaskDone(task.id)}>
+      <Item key={task.id} $hidden={task.done && hideDone}>
+        <ToggleDoneButton onClick={() => toggleTaskDone(task.id)}>
           {task.done ? " ✓ " : ""}
-        </Button>
-        <Content done={task.done}>{task.content}</Content>
-        <Button remove onClick={() => removeTask(task.id)}>
+        </ToggleDoneButton>
+        <Content $done={task.done}>{task.content}</Content>
+        <RemoveButton onClick={() => removeTask(task.id)}>
           🗑
-        </Button>
+        </RemoveButton>
       </Item>
     ))}
   </List>
+</ThemeProvider>
 );
 
 export default Tasks;
