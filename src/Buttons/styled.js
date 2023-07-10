@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Button = styled.button`
+export const Wrapper = styled.button`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -8,6 +8,11 @@ export const Button = styled.button`
   border: none;
   color: ${({ theme }) => theme.color.atoll};
   transition: 0.5s;
+  cursor: pointer;
+`;
+export const StyledButton = styled.button`
+  border: none;
+  color: ${({ theme }) => theme.color.atoll};
   cursor: pointer;
 
   ${({ markAllDone }) =>
