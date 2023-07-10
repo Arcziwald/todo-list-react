@@ -13,7 +13,7 @@ export const theme = {
     gallery: "#ededed",
     teal: "#008080",
     persionGreen: "#009999",
-    seaGreen: "#338731"
+    seaGreen: "#338731",
   },
   breakpoint: {
     mobileMax: 768,
