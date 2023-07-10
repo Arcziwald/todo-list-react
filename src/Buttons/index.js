@@ -6,15 +6,12 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
   }
   return (
     <Wrapper>
-      <StyledButton
-        onClick={toggleHideDone}
-        toggleHideDone
-      >
+      <StyledButton onClick={toggleHideDone} $toggleHideDone>
         {hideDone ? "Pokaż" : "Ukryj"} ukończone
       </StyledButton>
       <StyledButton
         onClick={setAllDone}
-        markAllDone
+        $markAllDone
         disabled={tasks.every(({ done }) => done)}
       >
         Ukończ wszystkie

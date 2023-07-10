@@ -15,16 +15,16 @@ export const Item = styled.li`
   border-bottom: 1px solid ${({ theme }) => theme.color.alto};
   word-break: break-word;
 
-  ${({ hidden }) =>
-    hidden &&
+  ${({ $hidden }) =>
+    $hidden &&
     css`
       display: none;
     `}
 `;
 
 export const Content = styled.span`
-  ${({ done }) =>
-    done &&
+  ${({ $done }) =>
+    $done &&
     css`
       text-decoration: line-through;
     `}
@@ -36,32 +36,28 @@ export const Button = styled.button`
   width: 30px;
   height: 30px;
   padding: 0;
+  transition: color 1s;
+  cursor: pointer;
+`;
 
-  ${({ toggleDone }) =>
-    toggleDone &&
-    css`
-      background: ${({ theme }) => theme.color.forestGreen};
-      transition: color 1s;
-      cursor: pointer;
-      &:hover {
-        background: ${({ theme }) => theme.color.forestGreen};
-      }
-      &:active {
-        border: 2px solid ${({ theme }) => theme.color.black};
-      }
-    `}
+export const ToggleDoneButton = styled(Button)`
+  background: ${({ theme }) => theme.color.forestGreen};
 
-  ${({ remove }) =>
-    remove &&
-    css`
-      background: ${({ theme }) => theme.color.crimson};
-      transition: color 1s;
-      cursor: pointer;
-      &:hover {
-        background: ${({ theme }) => theme.color.torchRed};
-      }
-      &:active {
-        border: 2px solid ${({ theme }) => theme.color.black};
-      }
-    `}
+  &:hover {
+    background: ${({ theme }) => theme.color.seaGreen};
+  }
+  &:active {
+    border: 2px solid ${({ theme }) => theme.color.black};
+  }
+`;
+
+export const RemoveButton = styled(Button)`
+  background: ${({ theme }) => theme.color.crimson};
+
+  &:hover {
+    background: ${({ theme }) => theme.color.torchRed};
+  }
+  &:active {
+    border: 2px solid ${({ theme }) => theme.color.black};
+  }
 `;

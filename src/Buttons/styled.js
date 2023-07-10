@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Wrapper = styled.button`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -10,13 +10,14 @@ export const Wrapper = styled.button`
   transition: 0.5s;
   cursor: pointer;
 `;
+
 export const StyledButton = styled.button`
   border: none;
   color: ${({ theme }) => theme.color.atoll};
   cursor: pointer;
 
-  ${({ markAllDone }) =>
-    markAllDone &&
+  ${({ $markAllDone }) =>
+    $markAllDone &&
     css`
       &:hover {
         color: ${({ theme }) => theme.color.brightTurquoise};
@@ -29,8 +30,8 @@ export const StyledButton = styled.button`
       }
     `}
 
-  ${({ toggleHideDone }) =>
-    toggleHideDone &&
+  ${({ $toggleHideDone }) =>
+    $toggleHideDone &&
     css`
       &:hover {
         color: ${({ theme }) => theme.color.brightTurquoise};
