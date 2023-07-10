@@ -17,7 +17,7 @@ export const Header = styled.header`
   margin: 0 auto;
   border-bottom: 1px solid #ddd;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
   }
 `;

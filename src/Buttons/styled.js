@@ -4,9 +4,9 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: ${({ theme }) => theme.color.white};
   border: none;
-  color: rgb(9, 114, 133);
+  color: ${({ theme }) => theme.color.atoll};
   transition: 0.5s;
   cursor: pointer;
 
@@ -14,13 +14,13 @@ export const Button = styled.button`
     markAllDone &&
     css`
       &:hover {
-        color: rgb(18, 201, 233);
+        color: ${({ theme }) => theme.color.brightTurquoise};
       }
       &:active {
-        border: 2px solid rgb(0, 0, 0);
+        border: 2px solid ${({ theme }) => theme.color.black};
       }
       &:disabled {
-        color: gray;
+        color: ${({ theme }) => theme.color.silver};
       }
     `}
 
@@ -28,12 +28,12 @@ export const Button = styled.button`
     toggleHideDone &&
     css`
       &:hover {
-        color: rgb(18, 201, 233);
+        color: ${({ theme }) => theme.color.brightTurquoise};
       }
       &:active {
-        border: 2px solid rgb(0, 0, 0);
+        border: 2px solid ${({ theme }) => theme.color.black};
       }
-      @media (max-width: 767px) {
+      @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         width: 100%;
         margin: 2px;
       }
