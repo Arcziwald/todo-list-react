@@ -10,6 +10,12 @@ export const TaskForm = styled.form`
     grid-template-columns: 1fr;
   }
 `;
+export const Container = styled.main`
+  max-width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+`;
 
 export const Input = styled.input`
   padding: 10px;

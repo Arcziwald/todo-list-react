@@ -17,6 +17,7 @@ const Form = ({ addNewTask }) => {
     inputRef.current.focus();
   };
   return (
+  
     <TaskForm onSubmit={onFormSubmit}>
       <Input
         ref={inputRef}
@@ -26,6 +27,7 @@ const Form = ({ addNewTask }) => {
       />
       <Button onClick={focusInput}>Dodaj zadanie</Button>
     </TaskForm>
+  
   );
 };
 
